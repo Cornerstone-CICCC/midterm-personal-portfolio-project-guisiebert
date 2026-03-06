@@ -1,2 +1,4 @@
 node_modules
 .vscode
+_visual-inspiration/
+.DS_Store
