@@ -3,23 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Website</title>
+    <title>Guilherme Siebert</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="icon">
-            <img src="./images/Sample_User_Icon.png" class="invert" alt="Icon">
+    <div class="layout">
+
+        <!-- Profile -->
+        <aside class="profile">
+            <img src="images/profile-pic.jpg" alt="Guilherme Siebert" class="avatar">
+            <h1>Guilherme Siebert</h1>
+            <p>
+                <strong>
+                Full Stack Web & Mobile Developer 
+                </strong>
+            </p>
+            <p>
+                Next.js | React.js | TypeScript 
+                <br>Node.js | React Native<br>
+            </p>
+            <p>
+                Originally from Curitiba, Brazil. <br> Currently in Vancouver, Canada.
+            </p>
+        </aside>
+
+        <!-- Bento sections -->
+        <div class="content">
+					<h2>Where to find me</h2>
+					<div class="bento-grid">
+
+							<!-- GitHub Card (2 cols × 2 rows) -->
+							<div class="bento-card github-card col-span-2 row-span-2">
+									<div class="github-header">
+											<div class="github-logo">
+													<i data-lucide="github"></i>
+											</div>
+											<span>My GitHub Profile</span>
+											<a href="https://github.com/guisiebert" target="_blank" class="github-follow-btn">Follow</a>
+									</div>
+
+									<div class="github-chart-scroll">
+											<img src="https://ghchart.rshah.org/guisiebert" alt="GitHub contribution chart">
+									</div>
+									<p class="github-stat">Lots of contributions in the last year</p>
+							</div>
+
+							<!-- Narrow Link Cards (2 cols × 2 rows) -->
+							<div class="narrow-links col-span-2 row-span-2">
+						<a href="https://linkedin.com/in/guisiebert" target="_blank" class="bento-card narrow-card">
+								<i data-lucide="linkedin"></i>
+								<span>LinkedIn Profile</span>
+								<i data-lucide="arrow-up-right" class="arrow-icon"></i>
+							</a>
+							<a href="https://hackerrank.com" target="_blank" class="bento-card narrow-card">
+								<i data-lucide="code-2"></i>
+								<span>HackerRank Profile</span>
+								<i data-lucide="arrow-up-right" class="arrow-icon"></i>
+							</a>
+							<a href="#" class="bento-card narrow-card">
+								<i data-lucide="briefcase"></i>
+								<span>Download my resume</span>
+								<i data-lucide="arrow-up-right" class="arrow-icon"></i>
+							</a>
+							<a href="https://buymeacoffee.com" target="_blank" class="bento-card narrow-card">
+								<i data-lucide="coffee"></i>
+								<span>Buy me a coffee</span>
+								<i data-lucide="arrow-up-right" class="arrow-icon"></i>
+							</a>
+							</div>
+
+							<!-- Social Cards -->
+							<a href="https://instagram.com/guisiebert" target="_blank" class="bento-card social-card social-instagram">
+									<i data-lucide="instagram"></i>
+									<div>
+											<p class="social-name">Instagram</p>
+											<p class="social-handle">@guisiebert</p>
+									</div>
+							</a>
+							<a href="https://linkedin.com/in/guisiebert" target="_blank" class="bento-card social-card social-linkedin">
+								<i data-lucide="linkedin"></i>
+								<div>
+										<p class="social-name">LinkedIn</p>
+										<p class="social-handle">guisiebert</p>
+								</div>
+							</a>
+							<a href="https://twitter.com/guilhermos" target="_blank" class="bento-card social-card social-twitter">
+									<i data-lucide="twitter"></i>
+									<div>
+											<p class="social-name">X / Twitter</p>
+											<p class="social-handle">@guilhermos</p>
+									</div>
+							</a>
+							<a href="mailto:gui@guisiebert.com" target="_blank" class="bento-card social-card social-email">
+									<i data-lucide="mail"></i>
+									<div>
+											<p class="social-name">Email</p>
+											<p class="social-handle">gui@guisiebert.com</p>
+									</div>
+							</a>
+
+					</div>
+
+					<h2>My projects</h2>
+					<div class="bento-grid">
+
+							<a href="#" class="bento-card project-gradient col-span-2">
+									<div>
+											<h3>🐼 GoPanda</h3>
+											<p>This is how I redeveloped a ticket platform reducing server costs by 40 and the lessons I learned.</p>
+									</div>
+									<div class="project-link">
+											<span>View Project</span>
+											<i data-lucide="external-link"></i>
+									</div>
+							</a>
+
+							<a href="#" class="bento-card project-minimal col-span-2">
+									<div>
+											<span class="project-badge">PROJECT</span>
+											<h3>Rotabull Mobile App</h3>
+											<p>Mobile application developed for Rotabull using React Native and Expo SDK.</p>
+									</div>
+									<div class="project-link">
+											<span>Learn more</span>
+											<i data-lucide="external-link"></i>
+									</div>
+							</a>
+
+					</div>
+
+					<h2>More about me</h2>
+					<div class="bento-grid">
+
+						<div class="bento-card image-card col-span-2 row-span-2">
+							<img src="images/square-1.jpg" alt="My family and I">
+						</div>
+						<div class="bento-card image-card ">
+							<img src="images/square-2.jpeg" alt="My daughter Becky and I">
+						</div>
+						<div class="bento-card skills-card">
+							<p class="skills-label">Tech Stack</p>
+							<div class="skills-tags">
+								<span>Next.js</span>
+								<span>React</span>
+								<span>TypeScript</span>
+								<span>Node.js</span>
+								<span>React Native</span>
+								<span>Prisma</span>
+								<span>Postgres</span>
+								<span>Tailwind</span>
+							</div>
+						</div>
+						<div class="bento-card skills-card">
+							<p class="skills-label">Soft Skills</p>
+							<div class="skills-tags">
+								<span>Entrepreneurship</span>
+								<span>Communication</span>
+								<span>Leadership</span>
+								<span>Design</span>
+								<span>Proactive</span>
+								<span>Creativity</span>
+
+							</div>
+						</div>
+						<div class="bento-card image-card">
+							<img src="images/square-3.jpeg" alt="My son Simon">
+						</div>
+
+					</div>
+
         </div>
-        <div class="buttons">
-            <button>Home</button>
-            <button>About</button>
-            <button>Contact</button>
-        </div>
-    </nav>
-    <main>
-        <h1>This is an example website</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p>
-    </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
