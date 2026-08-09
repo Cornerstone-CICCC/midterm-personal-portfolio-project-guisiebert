@@ -1,101 +1,97 @@
-# Mid Term - Personal Portfolio Website
+# My School Portfolio
 
-**Live Deployment Link:** https://guisiebert.netlify.app/
+Personal portfolio of **Guilherme Siebert** — a bento-grid landing page plus a
+case-study page, built with React, TypeScript, Tailwind CSS and Vite.
 
-## Goal
+## Tech stack
 
-The goal of this assignment is to create a personal portfolio website that will be used to showcase your work and skills to potential employers.
-
-## Setup
-
-1. Clone this repository to your local machine.
-
-   ```zsh
-     git clone <repository url>
-   ```
-
-2. Go to the repository directory in your local machine.
-
-   ```zsh
-     cd ./path-to-repository
-   ```
-
-3. Install dependencies.
-
-   ```zsh
-     npm install
-   ```
-
-4. Start the local server.
-
-   ```zsh
-     npm run dev
-   ```
+| Purpose      | Choice                       |
+| ------------ | ---------------------------- |
+| Build tool   | Vite 6                       |
+| UI           | React 19 + TypeScript        |
+| Styling      | Tailwind CSS 4 (`@tailwindcss/vite`) |
+| Routing      | React Router 7               |
+| Icons        | lucide-react                 |
+| Hosting      | Vercel                       |
 
 ## Requirements
 
-- You are expected to apply the concepts learned throughout this course and beyond. You are welcome to use external libraries and packages, but be prepared to explain your implementation choices if asked by the class.
+- Node.js 20 or newer
+- npm 10 or newer
 
-- Before you start building, you may optionally create a wireframe of your website (e.g., using Whimsical / Figma / etc.) and add a screenshot to your repository. Alternatively, you can refer to one of the developer portfolios linked in the Resources section below—or find inspiration from other developer portfolios online.
+## Getting started
 
-- Your website must include all or some of the following sections/pages:
-  - Home
-  - About
-  - Projects
-  - Skills (Soft and Hard Skills)
-  - Work Experiences
-  - Contact
+```bash
+npm install
+```
 
-- You can choose to have a separate page for each section or you can have a single page with multiple sections.
+```bash
+npm run dev
+```
 
-- JavaScript is not required for this project.
+The dev server prints a local URL (by default <http://localhost:5173>).
 
-## Workflow
+## Available scripts
 
-- Create a new branch with a descriptive name of your first implementation.
-- Commit often and write descriptive commit messages.
-- Once you are done with your first implementation, push your branch to GitHub and merge to main.
-- Create a new branch for your second implementation and repeat the process.
+| Script            | What it does                                          |
+| ----------------- | ----------------------------------------------------- |
+| `npm run dev`     | Starts the Vite dev server with hot reload            |
+| `npm run build`   | Type-checks with `tsc` and builds the site into `dist/` |
+| `npm run preview` | Serves the production build locally                   |
+| `npm run lint`    | Type-checks only, without emitting files              |
 
-## Content
+## Project structure
 
-- Add a short bio about yourself.
-- Add some images to your website. It can be a picture of yourself or any other image that you like. Screenshots of your projects are also a good idea.
-- If you do not have any projects yet, you can add this project as the first (you can also add other projects like artwork, etc.).
+```
+.
+├── index.html            # Vite entry HTML
+├── public/images/        # Static images served from /images/...
+├── src/
+│   ├── main.tsx          # App bootstrap (React root + router)
+│   ├── App.tsx           # Route definitions
+│   ├── index.css         # Tailwind import + theme tokens
+│   ├── components/       # Layout, sidebar and bento cards
+│   ├── data/             # Profile info, links, projects, skills
+│   └── pages/            # Home, GoPanda case study, 404
+└── vercel.json           # Vercel framework + SPA rewrites
+```
 
-## Resources
+Content lives in `src/data/` — edit `profile.ts` and `links.ts` to change the
+profile text, social links, projects and skill tags without touching components.
 
-- Portfolio References: [Developer Portfolios](https://github.com/emmabostian/developer-portfolios)
-- Free Images: [Unsplash](https://unsplash.com/)
-- Icons: [Font Awesome](https://fontawesome.com/)
-- Colors: [Coolors](https://coolors.co/)
-- Fonts: [Google Fonts](https://fonts.google.com/)
+## Routes
 
-## Evaluation Criteria
+| Path                 | Page                     |
+| -------------------- | ------------------------ |
+| `/`                  | Portfolio home           |
+| `/projects/gopanda`  | GoPanda case study       |
+| anything else        | 404 page                 |
 
-Marks will be awarded based on the following:
+## Deploying to Vercel
 
-- **Git Usage & Code Quality:** Frequent, descriptive commits and clean, well-organized code.
-- **Creativity & Aesthetics:** The overall design, visual appeal, and look of the final website.
-- **Responsiveness:** How well the website adapts to different screen sizes and devices.
-- **Technical Understanding:** How effectively you can explain your code, structure, and implementation choices.
-- **Presentation Skills:** Clarity, delivery, and organization during your presentation.
+### Option A — Git integration (recommended)
 
-## Submission
+1. Push this repository to GitHub.
+2. In the [Vercel dashboard](https://vercel.com/new), click **Add New → Project**
+   and import the repository.
+3. Vercel detects Vite automatically. Confirm the defaults:
+   - Build command: `npm run build`
+   - Output directory: `dist`
+4. Click **Deploy**. Every later push to `main` redeploys automatically.
 
-- Make sure to push your latest code to GitHub.
-- Deploy your project and add the live deployment link to the top of this README file.
+### Option B — Vercel CLI
 
-## Presentation
+```bash
+npm i -g vercel
+```
 
-- Presentations will be held on March 6th during class time.
-- Your presentation should be roughly 10 minutes or less, but absolutely no longer than 12 minutes. (Q&A is considered additional time and does not count towards your limit).
-- You may include in your presentation what inspired you, the main challenges you faced, and how you overcame them.
+```bash
+vercel
+```
 
-## AI Usage & Academic Integrity
+```bash
+vercel --prod
+```
 
-> ⚠️ You may use AI to help you understand and explain topics which you may struggle with. But remember that in the presentation you may be asked to explain your code, and if you fail to answer correctly you will **be penalized**.
-
----
-
-Good luck, and we are excited to see your creativity and skills in this project!
+`vercel.json` rewrites every path to `index.html` so client-side routes such as
+`/projects/gopanda` work on a direct page load or refresh.

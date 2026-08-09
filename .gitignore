@@ -1,4 +1,7 @@
 node_modules
+dist
+.vercel
 .vscode
 _visual-inspiration/
 .DS_Store
+*.local
